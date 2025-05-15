@@ -5,4 +5,5 @@ class RAGRequest(BaseModel):
     question: str
 
 class RAGResponse(BaseModel):
-    answers: List[str]
+    answer: str
+    sources: List[str]
