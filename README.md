@@ -36,6 +36,16 @@ The system is limited; it will always return a response, even if the answer to t
 
 
 
+# Testing
+I added several unit tests for the retriever and API. 
+
+![Alt text](/screenshots/test_1.png?raw=true)
+
+![Alt text](/screenshots/test_2.png?raw=true)
+
+![Alt text](/screenshots/test_3.png?raw=true)
+
+
 # Instructions
 
 ### To Install
