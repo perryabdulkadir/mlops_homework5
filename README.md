@@ -6,13 +6,16 @@ I used a RAG-based solution to return responses to user questions. To create the
 
 My general approach was to use the `get_similar_responses` function in `retriever.py` to 1) convert the user question to an embedding, 2) compute the similarity with each of the 6,000 excerpts (I chose not to use an approximate nearest neighbor approach due to the small size of this dataset allowing for fast pairwise calculation), 3) return the closest response. 
 
-In the code, you'll also see my vain attempts to summarize the response in the `generate_answer` function. The idea was to use Google's FLAN-T5 language model to then summarize the returned text based on the user's query. This small model can run locally on my Macbook. The idea was that instead of responding to this question: "What is the population of Maklavan?" with this long answer: "Maklavan: Maklavan (, also Romanized as Mākalān) is a city and capital of Sardar-e Jangal District, in Fuman County, Gilan Province, Iran At the 2006 census, its population was 2,170 individuals", we could instead respond "The population of Maklavan is 2,170." Unfortunately, I couldn't the summarized results returned - only the verbatim text is ever returned. 
+After collecting the verbatim responses (referred to as "sources" in the response), I use the `generate_answer` function to explicitly answer the user's question. I used Google's FLAN-T5 language model to summarize the returned text based on the user's query. This small model can run locally on my Macbook. Here are some examples from testing in Swagger docs. 
 
+When given the question, "What is the population of Maklavan?", the closest excerpt is this:  "Maklavan: Maklavan (, also Romanized as Mākalān) is a city and capital of Sardar-e Jangal District, in Fuman County, Gilan Province, Iran At the 2006 census, its population was 2,170 individuals". The language model allows us to return the much more concise "2,170" to the user (the "answer"). 
 
+#### Query
 
+![Alt text](/screenshots/q1_query.png?raw=true)
 
-
-
+#### Response
+![Alt text](/screenshots/q1_response.png?raw=true)
 
 
 
