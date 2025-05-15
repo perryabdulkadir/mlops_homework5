@@ -18,6 +18,23 @@ When given the question, "What is the population of Maklavan?", the closest exce
 ![Alt text](/screenshots/q1_response.png?raw=true)
 
 
+Another example, this time properly returning the year only when asked: 
+#### Query
+![Alt text](/screenshots/q2_query.png?raw=true)
+
+
+#### Response
+![Alt text](/screenshots/q2_response.png?raw=true)
+
+The system is limited; it will always return a response, even if the answer to the question isn't in the database. 
+#### Query
+![Alt text](/screenshots/q3_query.png?raw=true)
+
+
+#### Response
+![Alt text](/screenshots/q3_response.png?raw=true)
+
+
 
 # Instructions
 
