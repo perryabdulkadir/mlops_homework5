@@ -12,10 +12,10 @@ When given the question, "What is the population of Maklavan?", the closest exce
 
 #### Query
 
-![Alt text](/screenshots/q1_query.png?raw=true)
+![Alt text](/screenshots/q1_query.png)
 
 #### Response
-![Alt text](/screenshots/q1_response.png?raw=true)
+![Alt text](/screenshots/q1_response.png)
 
 
 Another example, this time properly returning the year only when asked: 
